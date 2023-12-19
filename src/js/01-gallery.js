@@ -85,7 +85,7 @@ const str = images.reduce((acc, e) => acc + `
 
 gallery.insertAdjacentHTML("afterbegin", str);
 
-const closeIcon = new URL('./img/icons.svg#icon-close', import.meta.url).href;
+const closeIcon = new URL('/img/icons.svg#icon-close', import.meta.url).href;
 
 // const closeIcon = `
 //   <svg width="32" height="32">
