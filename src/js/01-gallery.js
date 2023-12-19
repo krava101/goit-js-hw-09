@@ -87,14 +87,14 @@ gallery.insertAdjacentHTML("afterbegin", str);
 
 const closeIcon = `
   <svg class="close-icon">
-    <use href="../img/icons.svg#icon-close"></use>
+    <use href="./img/icons.svg#icon-close"></use>
   </svg>`
 const arrowIcons = [
   `<svg class="arrow left-arrow">
-    <use href="../img/icons.svg#icon-arrow-left"></use>
+    <use href="./img/icons.svg#icon-arrow-left"></use>
   </svg>`,
   `<svg class="arrow right-arrow">
-    <use href="../img/icons.svg#icon-arrow-right"></use>
+    <use href="./img/icons.svg#icon-arrow-right"></use>
   </svg>`];
 
 const lboxOptions = {
