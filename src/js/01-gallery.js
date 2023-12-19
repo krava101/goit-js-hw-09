@@ -85,28 +85,18 @@ const str = images.reduce((acc, e) => acc + `
 
 gallery.insertAdjacentHTML("afterbegin", str);
 
-const closeIcon = new URL('/img/icons.svg#icon-close', import.meta.url).href;
-
-// const closeIcon = `
-//   <svg width="32" height="32">
-//     <use href="./img/icons.svg#icon-close"></use>
-//   </svg>`
-const arrowIcons = [
-  `<svg class="arrow left-arrow">
-    <use href="./img/icons.svg#icon-arrow-left"></use>
-  </svg>`,
-  `<svg class="arrow right-arrow">
-    <use href="./img/icons.svg#icon-arrow-right"></use>
-  </svg>`];
+const closeIconUrl = new URL('/img/icons.svg#icon-close', import.meta.url).href;
+const leftIconUrl = new URL('/img/icons.svg#icon-arrow-left', import.meta.url).href;
+const rightIconUrl = new URL('/img/icons.svg#icon-arrow-right', import.meta.url).href;
 
 const lboxOptions = {
   captionsData: "alt",
   captionDelay: "250",
-  closeText: `
-    <svg width="32" height="32">
-      <use href="${closeIcon}"></use>
-    </svg>`,
-  navText: arrowIcons,
+  closeText: `<svg width="32" height="32"><use href="${closeIconUrl}"></use></svg>`,
+  navText: [
+    `<svg width="24" height="24"><use href="${leftIconUrl}"></use></svg>`,
+    `<svg width="24" height="24"><use href="${rightIconUrl}"></use></svg>`
+  ]
 }
 
 var lightbox = new SimpleLightbox('.gallery a', lboxOptions);
