@@ -8,7 +8,7 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
         alt="${o.description}"
       />
     </a>
-  </li>`,"");p.insertAdjacentHTML("afterbegin",e);const s=new URL("./img/icons.svg#icon-close",self.location).href,c=[`<svg class="arrow left-arrow">
+  </li>`,"");p.insertAdjacentHTML("afterbegin",e);const s=new URL("/goit-js-hw-09/assets/icons-432e83bc.svg#icon-close",self.location).href,c=[`<svg class="arrow left-arrow">
     <use href="./img/icons.svg#icon-arrow-left"></use>
   </svg>`,`<svg class="arrow right-arrow">
     <use href="./img/icons.svg#icon-arrow-right"></use>
