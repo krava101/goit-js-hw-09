@@ -85,10 +85,12 @@ const str = images.reduce((acc, e) => acc + `
 
 gallery.insertAdjacentHTML("afterbegin", str);
 
-const closeIcon = `
-  <svg class="close-icon">
-    <use href="./img/icons.svg#icon-close"></use>
-  </svg>`
+const closeIcon = new URL('./img/icons.svg#icon-close', import.meta.url).href;
+
+// const closeIcon = `
+//   <svg width="32" height="32">
+//     <use href="./img/icons.svg#icon-close"></use>
+//   </svg>`
 const arrowIcons = [
   `<svg class="arrow left-arrow">
     <use href="./img/icons.svg#icon-arrow-left"></use>
@@ -100,7 +102,10 @@ const arrowIcons = [
 const lboxOptions = {
   captionsData: "alt",
   captionDelay: "250",
-  closeText: closeIcon,
+  closeText: `
+    <svg width="32" height="32">
+      <use href="${closeIcon}"></use>
+    </svg>`,
   navText: arrowIcons,
 }
 
