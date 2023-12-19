@@ -10,10 +10,10 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
     </a>
   </li>`,"");t.insertAdjacentHTML("afterbegin",e);const s=`
   <svg class="close-icon">
-    <use href="../img/icons.svg#icon-close"></use>
+    <use href="./img/icons.svg#icon-close"></use>
   </svg>`,c=[`<svg class="arrow left-arrow">
-    <use href="../img/icons.svg#icon-arrow-left"></use>
+    <use href="./img/icons.svg#icon-arrow-left"></use>
   </svg>`,`<svg class="arrow right-arrow">
-    <use href="../img/icons.svg#icon-arrow-right"></use>
+    <use href="./img/icons.svg#icon-arrow-right"></use>
   </svg>`],n={captionsData:"alt",captionDelay:"250",closeText:s,navText:c};new a(".gallery a",n);
 //# sourceMappingURL=commonHelpers.js.map
