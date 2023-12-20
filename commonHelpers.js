@@ -8,5 +8,5 @@ import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                
         alt="${o.description}"
       />
     </a>
-  </li>`,"");a.insertAdjacentHTML("afterbegin",p);const s=new URL("/goit-js-hw-09/assets/icons-432e83bc.svg#icon-close",self.location).href,c=new URL("/goit-js-hw-09/assets/icons-432e83bc.svg#icon-arrow-left",self.location).href,n=new URL("/goit-js-hw-09/assets/icons-432e83bc.svg#icon-arrow-right",self.location).href,r={captionsData:"alt",captionDelay:"250",closeText:`<svg width="32" height="32"><use href="${s}"></use></svg>`,navText:[`<svg width="24" height="24"><use href="${c}"></use></svg>`,`<svg width="24" height="24"><use href="${n}"></use></svg>`]};new t(".gallery a",r);
+  </li>`,"");a.insertAdjacentHTML("afterbegin",p);const s=new URL("/goit-js-hw-09/assets/icons-432e83bc.svg#icon-close",self.location).href,c=new URL("/goit-js-hw-09/assets/icons-432e83bc.svg#icon-arrow-left",self.location).href,n=new URL("/goit-js-hw-09/assets/icons-432e83bc.svg#icon-arrow-right",self.location).href,r={captionsData:"alt",captionDelay:250,closeText:`<svg width="32" height="32"><use href="${s}"></use></svg>`,navText:[`<svg width="24" height="24"><use href="${c}"></use></svg>`,`<svg width="24" height="24"><use href="${n}"></use></svg>`]};new t(".gallery a",r);
 //# sourceMappingURL=commonHelpers.js.map
