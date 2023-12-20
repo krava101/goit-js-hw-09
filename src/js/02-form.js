@@ -4,7 +4,13 @@ const message = form.elements.message;
 const LOCAL_FEEDBACK_KEY = "feedback-form-state";
 
 const withOutSpace = e => e.replace(/\s/g, "");
-const updStorageInfo = () => JSON.parse(localStorage.getItem(LOCAL_FEEDBACK_KEY));
+const updStorageInfo = () => {
+    try {
+        return JSON.parse(localStorage.getItem(LOCAL_FEEDBACK_KEY))
+    } catch (error) {
+        console.error(error);
+    }
+};
 const savedFeedback = updStorageInfo();
 const feedback = {};
 
