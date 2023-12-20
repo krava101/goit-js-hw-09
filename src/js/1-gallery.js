@@ -99,4 +99,4 @@ const lboxOptions = {
   ]
 }
 
-var lightbox = new SimpleLightbox('.gallery a', lboxOptions);
+const lightbox = new SimpleLightbox('.gallery a', lboxOptions);
