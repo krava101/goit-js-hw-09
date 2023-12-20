@@ -1,5 +1,4 @@
 import SimpleLightbox from "simplelightbox";
-
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 const images = [
@@ -91,7 +90,7 @@ const rightIconUrl = new URL('/img/icons.svg#icon-arrow-right', import.meta.url)
 
 const lboxOptions = {
   captionsData: "alt",
-  captionDelay: "250",
+  captionDelay: 250,
   closeText: `<svg width="32" height="32"><use href="${closeIconUrl}"></use></svg>`,
   navText: [
     `<svg width="24" height="24"><use href="${leftIconUrl}"></use></svg>`,
@@ -99,4 +98,4 @@ const lboxOptions = {
   ]
 }
 
-var lightbox = new SimpleLightbox('.gallery a', lboxOptions);
+const lightbox = new SimpleLightbox('.gallery a', lboxOptions);

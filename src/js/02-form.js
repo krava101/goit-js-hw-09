@@ -3,35 +3,38 @@ const email = form.elements.email;
 const message = form.elements.message;
 const LOCAL_FEEDBACK_KEY = "feedback-form-state";
 
-const withOutSpace = e => e.replace(/\s/g, "");
-const updStorageInfo = () => {
+const getSavedFormData = () => {
     try {
         return JSON.parse(localStorage.getItem(LOCAL_FEEDBACK_KEY))
     } catch (error) {
         console.error(error);
     }
 };
-const savedFeedback = updStorageInfo();
-const feedback = {};
+
+const savedFeedback = getSavedFormData();
 
 if (localStorage.length !== 0) {
-    email.value = savedFeedback.email;
-    message.value = savedFeedback.message;
+    email.value = savedFeedback.userEmail;
+    message.value = savedFeedback.userMessage;
 }
 
-const formInput = event => {
-    feedback[email.name] = email.value;
-    feedback[message.name] = message.value;
-    localStorage.setItem(LOCAL_FEEDBACK_KEY, JSON.stringify(feedback));
+const formInput = () => {
+    const userFeedback = {
+        userEmail:'',
+        userMessage:''
+    }
+    userFeedback.userEmail = email.value.trim();
+    userFeedback.userMessage = message.value.trim();
+    localStorage.setItem(LOCAL_FEEDBACK_KEY, JSON.stringify(userFeedback));
 }
 
-const formSubmit = event => {
+const formSubmit = () => {
     event.preventDefault();
-    if (withOutSpace(email.value) === "" || withOutSpace(message.value) === "") {
+    if (email.value.trim() === "" || message.value.trim() === "") {
         alert('All form fields must be filled in');
     } else {
         form.reset();
-        console.table(updStorageInfo());
+        console.table(getSavedFormData());
         localStorage.removeItem(LOCAL_FEEDBACK_KEY);
     }
 }
